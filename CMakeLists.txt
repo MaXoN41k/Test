@@ -17,11 +17,11 @@ endif()
 #add_subdirectory(vector) #Добавляем директорию с под-CMakeList-ом, и выполняем под-CMakeList
 #add_subdirectory(vectorlib)
 
-#file(GLOB hdrs "*.h*") #Добавляем в переменную hdrs все файлы с расширением .h
-#file(GLOB srcs "*.cpp") #Добавляем в переменную srcs все файлы с расширением .cpp
+file(GLOB hdrs "*.h*") #Добавляем в переменную hdrs все файлы с расширением .h
+file(GLOB srcs "*.cpp") #Добавляем в переменную srcs все файлы с расширением .cpp
 
 #include_directories(lib1)
-#add_executable(${PROJECT_NAME} ${srcs} ${hdrs}) #Создаем проект с именем из переменной ${PROJECT_NAME}, в него добавляются файлы из переменных ${srcs} и ${hdrs}
+add_executable(${PROJECT_NAME} ${srcs} ${hdrs}) #Создаем проект с именем из переменной ${PROJECT_NAME}, в него добавляются файлы из переменных ${srcs} и ${hdrs}
 
 
  #Собираем проект в поддиректории lib1
