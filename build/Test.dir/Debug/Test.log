@@ -1,0 +1,9 @@
+﻿  Ofline.cpp
+..\Ofline.cpp(9,21): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+..\Ofline.cpp(31,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Online.cpp
+  Workers.cpp
+..\Workers.cpp(9,23): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+..\Workers.cpp(31,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Создание кода...
+  Test.vcxproj -> D:\Games\Все проги\visual studio\projects\Test\build\Debug\Test.exe

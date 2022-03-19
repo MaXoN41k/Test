@@ -8,6 +8,9 @@ public:
 	const char* GetName();
 	int GetYear();
 	int GetId();
+	void SetName(const char* newName);
+	void SetYear(int ye);
+	void SetId(int _id);
 protected:
 	int year;
 	int id;
