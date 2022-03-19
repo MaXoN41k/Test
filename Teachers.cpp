@@ -20,8 +20,52 @@ TTeachers::TTeachers(const char* newName, int newYear, int newId, int sw, int fw
 	}
 }
 
+int TTeachers::GetGroupCount()
+{
+	return groupCount;
+}
+
+char* TTeachers::GetGroupKurat()
+{
+	return groupKurator;
+}
+
+void TTeachers::SetGroupCount(int count)
+{
+	if (count > 0)
+	{
+		groupCount = count;
+	}
+	else
+	{
+		groupCount = 0;
+	}
+}
+
+void TTeachers::SetGroupKurat(const char* kur)
+{
+	if (kur != nullptr)
+	{
+		int k = strlen(kur);
+		groupKurator = new char[k + 1];
+		for (int i = 0; i < k + 1; i++)
+		{
+			groupKurator[i] = kur[i];
+		}
+	}
+	else
+	{
+		groupKurator = "None";
+	}
+}
+
 TTeachers::~TTeachers()
 {
+	if (groupKurator != nullptr)
+	{
+		delete[] groupKurator;
+		groupKurator = nullptr;
+	}
 }
 
 

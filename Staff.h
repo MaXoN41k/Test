@@ -9,6 +9,10 @@ public:
 	int GetFinish();
 	int GetDays();
 	float GetMoney();
+	void SetStart(int swo);
+	void SetFinish(int fwo);
+	void SetDays(int day);
+	void SetMoneys(float mon);
 protected:
 	int startWork;
 	int finishWork;

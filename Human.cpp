@@ -43,3 +43,37 @@ int THuman::GetId()
 {
 	return id;
 }
+
+void THuman::SetName(const char* newName)
+{
+	if (newName != nullptr)
+	{
+		int t = strlen(newName);
+		name = new char[t + 1];
+		for (int i = 0; i < t + 1; i++)
+		{
+			name[i] = newName[i];
+		}
+	}
+	else
+	{
+		name = nullptr;
+	}
+}
+
+void THuman::SetYear(int ye)
+{
+	if (ye > 1920 && ye < 2022)
+	{
+		year = ye;
+	}
+	else
+	{
+		year = 0;
+	}
+}
+
+void THuman::SetId(int _id)
+{
+	id = _id;
+}

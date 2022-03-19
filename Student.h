@@ -8,6 +8,8 @@ public:
 	~TStudent();
 	int GetYear();
 	char* GetFaculty();
+	void SetYear(int enty);
+	void SetFaculty(const char* fcl);
 protected:
 	int enterYear;
 	char* faculty;

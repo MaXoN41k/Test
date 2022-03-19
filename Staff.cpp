@@ -28,3 +28,51 @@ float TStuff::GetMoney()
 {
 	return moneys;
 }
+
+void TStuff::SetStart(int swo)
+{
+	if (swo > 0 && swo <= 24)
+	{
+		startWork = swo;
+	}
+	else
+	{
+		startWork = 0;
+	}
+}
+
+void TStuff::SetFinish(int fwo)
+{
+	if (fwo > 0 && fwo <= 24 && fwo > startWork)
+	{
+		finishWork = fwo;
+	}
+	else
+	{
+		finishWork = 0;
+	}
+}
+
+void TStuff::SetDays(int day)
+{
+	if (day > 0 && day <= 7)
+	{
+		days = day;
+	}
+	else
+	{
+		days = 0;
+	}
+}
+
+void TStuff::SetMoneys(float mon)
+{
+	if (mon > 0 && mon < 500000)
+	{
+		moneys = mon;
+	}
+	else
+	{
+		moneys = 0;
+	}
+}

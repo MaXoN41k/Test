@@ -38,3 +38,32 @@ char* TStudent::GetFaculty()
 {
 	return faculty;
 }
+
+void TStudent::SetYear(int enty)
+{
+	if (enty > 2010 && enty < 2022)
+	{
+		enterYear = enty;
+	}
+	else
+	{
+		enterYear = 0;
+	}
+}
+
+void TStudent::SetFaculty(const char* fcl)
+{
+		if (fcl != nullptr)
+		{
+			int z = strlen(fcl);
+			faculty = new char[z + 1];
+			for (int i = 0; i < z + 1; i++)
+			{
+				faculty[i] = fcl[i];
+			}
+		}
+		else
+		{
+			faculty = nullptr;
+		}
+}
