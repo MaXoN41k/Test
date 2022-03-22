@@ -1,31 +1,47 @@
 #include "Institut.h"
-#include <string.h>
 
-TInstitut::TInstitut(char* inst)
+TInstitut::TInstitut()
 {
-	if (inst != nullptr)
+	humanCount = 0;
+	humans = nullptr;
+}
+
+TInstitut::~TInstitut()
+{
+	if (humans != nullptr)
 	{
-		int n = strlen(inst);
-		name = new char[n+1];
-		for (int i = 0; i < n+1; i++)
-		{
-			name[i] = inst[i];
-		}
+		delete[] humans;
+	}
+}
+
+void TInstitut::print()
+{
+	for (int i = 0; i < humanCount; i++)
+	{
+		humans[i]->print();
+	}
+}
+
+void TInstitut::AddHuman(THuman* human)
+{
+	if (humanCount == 0)
+	{
+		humans = new THuman * [1];
+		humanCount = 1;
+		humans[0] = human;
 	}
 	else
 	{
-		name = 0;
+		THuman** t = new THuman * [humanCount + 1];
+		for (int i = 0; i < humanCount; i++)
+		{
+			t[i] = humans[i];
+		}
+		delete[] human;
+		humans = t;
+		humans[humanCount] = human;
+		humanCount++;
 	}
 }
-TInstitut::~TInstitut()
-{
-	if (name != 0)
-	{
-		delete[] name;
-		name = 0;
-	}
-}
-char* TInstitut::GetInstitut()
-{
-	return name;
-}
+
+

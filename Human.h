@@ -11,6 +11,7 @@ public:
 	void SetName(const char* newName);
 	void SetYear(int ye);
 	void SetId(int _id);
+	void print();
 protected:
 	int year;
 	int id;
