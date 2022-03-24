@@ -13,12 +13,17 @@ int main()
 {
 	THuman human1("Mosyagin Maxim",2003,38210150);
 	THuman human2("Michail Afonin", 2006, 38210456);
-	THuman human2("Aleksandr Ibragimov", 2002, 38211234);
-	human1.SetName("Mihail");
+	THuman human3("Aleksandr Ibragimov", 2002, 38211234);
+	
 	TInstitut institut;
-	institut.AddHuman()
-	cout << human1.GetName() << endl;
+	institut.AddHuman(&human1);
+	institut.AddHuman(&human2);
+	institut.AddHuman(&human3);
+	
+	//cout << human1.GetName() << endl;
 	TStudent student("Mosyagin Maxim", 2003, 38210150, 2022, "IITMM");
+
+	institut.print();
 
 
 	return 0;

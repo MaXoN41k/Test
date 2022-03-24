@@ -18,7 +18,7 @@ void TInstitut::print()
 {
 	for (int i = 0; i < humanCount; i++)
 	{
-		humans[i]->print();
+		humans[i]->Print();
 	}
 }
 
@@ -26,7 +26,7 @@ void TInstitut::AddHuman(THuman* human)
 {
 	if (humanCount == 0)
 	{
-		humans = new THuman * [1];
+		humans = new THuman*[1];
 		humanCount = 1;
 		humans[0] = human;
 	}
@@ -37,10 +37,10 @@ void TInstitut::AddHuman(THuman* human)
 		{
 			t[i] = humans[i];
 		}
-		delete[] human;
 		humans = t;
 		humans[humanCount] = human;
 		humanCount++;
+
 	}
 }
 

@@ -79,8 +79,9 @@ void THuman::SetId(int _id)
 	id = _id;
 }
 
-void THuman::print()
+void THuman::Print()
 {
-	std::cout << "year:" << GetYear() << std::endl;
-	std::cout << "id:" << GetId() << std::endl;
+	std::cout << "name:" << name << std::endl;
+	std::cout << "year:" << year << std::endl;
+	std::cout << "id:" << id << std::endl << std::endl;
 }
