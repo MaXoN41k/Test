@@ -28,5 +28,6 @@ int main()
 	institut.Print();
 
 	delete stuff1;
+
 	return 0;
 }
