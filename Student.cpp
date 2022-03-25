@@ -1,5 +1,7 @@
-#include "Student.h"
+#include <iostream>
 #include <string.h>
+
+#include "Student.h"
 
 TStudent::TStudent(const char* newName, int newYear, int newId, int newEnterYear, const char* fc): 
 	THuman(newName, newYear, newId)
@@ -66,4 +68,10 @@ void TStudent::SetFaculty(const char* fcl)
 		{
 			faculty = nullptr;
 		}
+}
+
+void TStudent::Print()
+{
+	std::cout << "student:" << enterYear << std::endl;
+	THuman::Print();
 }

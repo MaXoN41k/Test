@@ -1,11 +1,14 @@
 #pragma once
+#include "Human.h"
 
 class TInstitut
 {
 public:
-	TInstitut(char* inst);
+	TInstitut();
 	~TInstitut();
-	char* GetInstitut();
+	void Print();
+	void AddHuman(THuman* human);
 protected:
-	char* name;
+	THuman** humans;
+	int humanCount;
 };

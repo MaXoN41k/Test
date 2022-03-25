@@ -10,6 +10,7 @@ public:
 	char* GetFaculty();
 	void SetYear(int enty);
 	void SetFaculty(const char* fcl);
+	void Print();
 protected:
 	int enterYear;
 	char* faculty;

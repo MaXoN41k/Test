@@ -1,5 +1,6 @@
 #include "Human.h"
 #include <string.h>
+#include <iostream>
 
 THuman::THuman(const char* newName, int newYear, int newId)
 {
@@ -76,4 +77,11 @@ void THuman::SetYear(int ye)
 void THuman::SetId(int _id)
 {
 	id = _id;
+}
+
+void THuman::Print()
+{
+	std::cout << "name:" << name << std::endl;
+	std::cout << "year:" << year << std::endl;
+	std::cout << "id:" << id << std::endl << std::endl;
 }
