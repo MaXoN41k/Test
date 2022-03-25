@@ -1,0 +1,3 @@
+D:/Games/Все проги/visual studio/projects/Test/build/CMakeFiles/Test.dir
+D:/Games/Все проги/visual studio/projects/Test/build/CMakeFiles/ALL_BUILD.dir
+D:/Games/Все проги/visual studio/projects/Test/build/CMakeFiles/ZERO_CHECK.dir
